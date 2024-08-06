@@ -7,9 +7,11 @@ window.addEventListener("scroll", function () {
 // Toggle Nav
 function toggleMenu() {
   if (window.innerWidth <= 800) {
+    // menu
     let menu = document.querySelector(".menu");
     menu.classList.toggle("active");
 
+    // icon
     let toggle = document.querySelector(".toggle");
     toggle.classList.toggle("active");
   }

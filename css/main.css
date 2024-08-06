@@ -1,34 +1,43 @@
+/* Importing Poppins font from Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Poppins:200, 300, 400, 500, 600, 700, 800, 900&display=swap");
+
+/* Defining CSS variables for primary, light, and dark colors */
 :root {
   --primary: dodgerblue;
   --light: #fff;
   --dark: #111;
 }
 
+/* Prevent horizontal scrolling on the entire page */
 html, body {
   overflow-x: hidden;
 }
+
 body {
-  position: relative
+  position: relative;
 }
 
+/* Applying Poppins font family and box-sizing to all elements */
 * {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
+/* Styling anchor tags */
 a {
   text-decoration: none;
   color: var(--primary);
 }
 
+/* Ensuring all images take full width and align vertically in the middle */
 img {
   width: 100%;
   vertical-align: middle;
 }
 
+/* Container class for responsive layout with padding and centered alignment */
 .container {
   max-width: 1200px;
   width: 100%;
@@ -38,6 +47,7 @@ img {
   margin-right: auto;
 }
 
+/* Button styling with uppercase text, primary color background, and rounded corners */
 .btn {
   color: var(--light);
   font-size: 12px;
@@ -52,15 +62,18 @@ img {
   background: var(--primary);
 }
 
+/* Body styling with margin reset and default font settings */
 body {
   margin: 0;
   font: 16px/1.6 "Poppins", sans-serif;
 }
 
+/* Section padding */
 section {
   padding: 100px 0;
 }
 
+/* Heading styling within sections */
 section .heading {
   text-align: center;
   margin-bottom: 30px;
@@ -75,6 +88,7 @@ section .heading p {
   margin: 0;
 }
 
+/* Header styling for fixed and sticky states with transitions */
 header {
   position: absolute;
   top: 0;
@@ -91,7 +105,7 @@ header.sticky {
   padding: 15px 20px;
   background: var(--light);
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header.sticky a {
@@ -102,27 +116,31 @@ header a {
   color: var(--light);
 }
 
+/* Header container styling with grid layout */
 header .container {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   grid-auto-flow: column;
 }
 
+/* Logo styling within header */
 header .container .logo {
   font-weight: bold;
   font-size: 1.75em;
 }
 
+/* Navigation link styling within header */
 header .container nav a {
   margin: 0px 15px;
 }
 
+/* Banner styling with full viewport height, background settings, and grid layout */
 .banner {
   color: var(--light);
   min-height: 100vh;
@@ -132,9 +150,10 @@ header .container nav a {
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
 }
 
+/* Text box styling within banner */
 .banner .textBx {
   padding: 3em 0;
 }
@@ -157,135 +176,157 @@ header .container nav a {
   font-weight: normal;
 }
 
+/* About section heading styling */
 .about .heading {
   margin-bottom: 50px;
 }
 
+/* About section subheading styling */
 .about h3 {
   font-size: 1.5em;
   margin: 0;
 }
 
+/* Grid container styling for About section */
 .about .grid-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
 }
 
+/* Services section styling */
 .services {
   color: var(--light);
   text-align: center;
   background-color: var(--dark);
 }
 
+/* Grid container styling for Services section */
 .services .content.grid-container {
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
   justify-items: center;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
+/* Individual service box styling */
 .services .content.grid-container .servicesBx {
   width: 100%;
   padding: 40px 20px;
   background: #222;
 }
 
+/* Service box image styling */
 .services .content.grid-container .servicesBx img {
   max-width: 80px;
   -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
 }
 
+/* Service box heading styling */
 .services .content.grid-container .servicesBx h2 {
   font-size: 1.25em;
   margin: 15px 0 10px 0;
 }
 
+/* Service box paragraph styling */
 .services .content.grid-container .servicesBx p {
   margin: 0;
 }
 
+/* Work section grid container styling */
 .work .grid-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 30px;
   margin-bottom: 30px;
 }
 
+/* Testimonial section background color */
 .testinomial {
   background-color: #f5f5f5;
 }
 
+/* Testimonial grid container styling */
 .testinomial .grid-container {
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
   color: var(--light);
   -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
+/* Individual testimonial box styling */
 .testinomial .grid-container .testinomialBx {
   padding: 40px;
   background: var(--primary);
 }
 
+/* Testimonial box paragraph styling */
 .testinomial .grid-container .testinomialBx p {
   font-style: italic;
 }
 
+/* Testimonial box heading styling */
 .testinomial .grid-container .testinomialBx h3 {
   text-align: right;
 }
 
+/* Testimonial box subheading styling */
 .testinomial .grid-container .testinomialBx h3 div {
   font-weight: normal;
   font-size: 16px;
 }
 
+/* Contact section styling */
 .contact {
   color: #222;
   background: var(--light);
 }
 
+/* Contact grid container styling */
 .contact .grid-container {
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
   -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
+/* Contact box styling with flexbox */
 .contact .grid-container .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
+/* Contact icon styling */
 .contact .grid-container .box .icon {
   font-size: 24px;
   margin-right: 30px;
 }
 
+/* Contact box heading styling */
 .contact .grid-container .box h3 {
   color: var(--primary);
   margin: 0;
 }
 
+/* Form input and textarea styling in Contact section */
 .contact .grid-container .formBx form input,
 .contact .grid-container .formBx form textarea {
   width: 100%;
@@ -299,6 +340,7 @@ header .container nav a {
   outline: none;
 }
 
+/* Placeholder text color for form inputs and textareas */
 .contact .grid-container .formBx form input::-webkit-input-placeholder,
 .contact .grid-container .formBx form textarea::-webkit-input-placeholder {
   color: var(--light);
@@ -319,15 +361,18 @@ header .container nav a {
   color: var(--light);
 }
 
+/* Textarea height in Contact form */
 .contact .grid-container .formBx form textarea {
   height: 200px;
 }
 
+/* Footer styling */
 footer {
   text-align: center;
   background: var(--dark);
 }
 
+/* Footer copyright text styling */
 footer .copyright p {
   color: var(--light);
   padding: 15px 0;
@@ -335,10 +380,11 @@ footer .copyright p {
   margin: 0;
 }
 
+/* Responsive styling for screens smaller than 800px */
 @media (max-width: 800px) {
   header.sticky .container .toggle {
     -webkit-filter: invert(1);
-            filter: invert(1);
+    filter: invert(1);
   }
   header.sticky .container .menu {
     top: 74px;
@@ -368,11 +414,11 @@ footer .copyright p {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     height: calc(100vh - 99px);
     text-align: center;
     background: var(--light);
@@ -396,20 +442,20 @@ footer .copyright p {
   }
   .about .grid-container {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .testinomial .grid-container {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .contact .grid-container {
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
-
-@media (max-width : 768px) {
+/* Responsive styling for screens smaller than 768px */
+@media (max-width: 768px) {
   /* .banner {
     position: relative;
     display: inline-block;
@@ -434,16 +480,15 @@ footer .copyright p {
   .overlay p {
     font-size: 20px;
     margin-top: -20px;
-
   }
 
   #about {
     margin-top: -100%;
   }
-  
 }
 
-@media (min-width : 768px) {
+/* Responsive styling for screens larger than 768px */
+@media (min-width: 768px) {
   .banner {
     position: relative;
     display: inline-block;
@@ -467,6 +512,5 @@ footer .copyright p {
   .overlay p {
     font-size: 20px;
     margin-top: -20px;
-
   }
 }
