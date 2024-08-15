@@ -17,7 +17,12 @@
         </style>
     </head>
 
-    <body>
+    <body onclick="playMusic()">
+		<!-- audio -->
+		<iframe src="audios/audio_testimonials.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+		<audio autoplay id="audio_testimonials">
+			<source src="audios/audio_testimonials.mp3" type="audio/mp3">
+		</audio>
         <!-- header -->
         <header style="padding-top: 3px !important; padding-bottom: 0px !important;">
             <div class="container">
