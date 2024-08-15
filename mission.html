@@ -24,6 +24,37 @@
             .icon i {
                 font-size: 70px;
             }
+
+            .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            }
+            .styled-table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+            }
+            .styled-table th, .styled-table td {
+                padding: 12px 15px;
+            }
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+            .styled-table tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+            .styled-table tbody tr:last-of-type {
+                border-bottom: 2px solid #009879;
+            }
+            .styled-table tbody tr.active-row :hover {
+                font-weight: bold;
+                color: #009879;
+            }
         </style>
     </head>
 
@@ -65,6 +96,58 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Title of the table -->
+                <h2 style="margin-top: 70px; text-align: center;">Success Stories</h2>
+                <!-- Styled table for displaying course recommendations -->
+                <table class="styled-table">
+                    <thead>
+                        <!-- Table headers for each semester -->
+                        <tr>
+                            <th>Index</th>
+                            <th>Pet Name</th>
+                            <th>Pet Age</th>
+                            <th>Shelter City</th>
+                            <th>Home Found Within (Days)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Highlighted row for important courses -->
+                        <tr>
+                            <td>1</td>
+                            <td>Jax</td>
+                            <td>2 Years</td>
+                            <td>Mississauga</td>
+                            <td>12 Days</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mia</td>
+                            <td>1 Years</td>
+                            <td>Brampton</td>
+                            <td>4 Days</td>
+                        </tr><tr>
+                            <td>3</td>
+                            <td>Will</td>
+                            <td>4 Years</td>
+                            <td>Toronto</td>
+                            <td>31 Days</td>
+                        </tr><tr>
+                            <td>4</td>
+                            <td>Elie</td>
+                            <td>1.5 Years</td>
+                            <td>Oakville</td>
+                            <td>14 Days</td>
+                        </tr><tr>
+                            <td>5</td>
+                            <td>Annie</td>
+                            <td>2 Years</td>
+                            <td>Mississauga</td>
+                            <td>18 Days</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
             </div>
         </section>
 
